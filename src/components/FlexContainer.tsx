@@ -12,5 +12,7 @@ export const FlexContainer= styled.div<FlexContainerPropsType>`
     flex-direction: ${props=> props.direction || "row"};
     justify-content: ${props=> props.justify || "flex-start"};
     align-items: ${props=> props.align || "strength"};
-    flex-wrap: ${props => props.wrap || "nowrap"};
+    flex-wrap: ${props => props.wrap || "no wrap"};
+    height: 100%;
+    
 `
