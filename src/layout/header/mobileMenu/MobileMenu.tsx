@@ -11,12 +11,12 @@ import {Theme} from "../../../styles/Theme";
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyleMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                     <span>
 
                     </span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <ListItem key={index}>
@@ -83,7 +83,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     right: -100px;
     width: 200px;
     height: 200px;
-    z-index: 999999;
+    z-index: 9999999;
 
     span {
         display: block;
