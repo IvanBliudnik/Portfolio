@@ -29,9 +29,10 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-    max-width: 540px;
-    width: 100%;
+    
+    width: 330px;
     background-color: ${Theme.colors.secondaryBg};
+    flex-grow: 1;
 
     ${Link} {
         padding: 10px 0;
@@ -39,6 +40,10 @@ const StyledWork = styled.div`
         & + ${Link} {
             margin-left: 20px;
         }
+    }
+    
+    @media ${Theme.media.desktop} {
+        max-width: 540px;
     }
 `
 
@@ -59,26 +64,6 @@ const Description = styled.div`
 `
 const ImageWrapper = styled.div`
     position: relative;
-
-    &:hover {
-
-        
-        
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            backdrop-filter: blur(8px);
-            background: rgba(0, 0, 0, 0.3);
-        }
-        ${StyleButton} {
-            opacity: 1;
-        }
-    }
-    
     
     ${StyleButton} {
         opacity: 0;
@@ -86,13 +71,42 @@ const ImageWrapper = styled.div`
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
+
         &::before {
             width: 100%;
             height: 100%;
         }
-        
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        backdrop-filter: blur(8px);
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
     }
     
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+        ${StyleButton} {
+            opacity: 1;
+        }
+    }
+    
+@media ${Theme.media.tablet} {
+    &::before {
+        opacity: 1;
+    }
+    ${StyleButton} {
+        opacity: 1;
+    }
+}
+//    вот эти все манипуляции делаем для того чтобы при наведении было помутнение
 `
 
