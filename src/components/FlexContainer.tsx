@@ -14,5 +14,4 @@ export const FlexContainer= styled.div<FlexContainerPropsType>`
     align-items: ${props=> props.align || "strength"};
     flex-wrap: ${props => props.wrap || "no wrap"};
     height: 100%;
-    
 `

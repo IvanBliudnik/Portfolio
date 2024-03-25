@@ -1,6 +1,9 @@
 
 import styled from "styled-components";
+// @ts-ignore
 import {Theme} from "../styles/Theme";
+
+
 
 export const Link = styled.a`
     font-size: 14px;
