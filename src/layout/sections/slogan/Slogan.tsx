@@ -12,7 +12,7 @@ export const Slogan = () => {
             <Container>
                 <FlexContainer direction={"column"} align={"center"}>
                     <SectionTitle>One team, one direction</SectionTitle>
-                    <StyleButton>Contact me</StyleButton>
+                    <StyleButton>Please contact me</StyleButton>
                 </FlexContainer>
             </Container>
         </StyledSlogan>
