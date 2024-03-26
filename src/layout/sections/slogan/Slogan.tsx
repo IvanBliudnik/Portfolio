@@ -11,8 +11,8 @@ export const Slogan = () => {
         <StyledSlogan>
             <Container>
                 <FlexContainer direction={"column"} align={"center"}>
-                    <SectionTitle>Just Do It</SectionTitle>
-                    <StyleButton>Hire Me</StyleButton>
+                    <SectionTitle>One team, one direction</SectionTitle>
+                    <StyleButton>Contact me</StyleButton>
                 </FlexContainer>
             </Container>
         </StyledSlogan>
