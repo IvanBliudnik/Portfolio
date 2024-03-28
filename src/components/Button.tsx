@@ -3,13 +3,16 @@ import {Theme} from "../styles/Theme";
 
 
 export const StyleButton = styled.button`
-    width: 170px;
+    width: 25%;
     height: 32px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     
     z-index: 0;
     

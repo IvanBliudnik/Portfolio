@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme";
 
@@ -9,14 +9,16 @@ import {Theme} from "../../../styles/Theme";
 // } //описание 13 строки
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
+    const [menuIsOpen, setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => { setmenuIsOpen(!menuIsOpen) }
     return (
         <StyleMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={menuIsOpen} onClick = {onBurgerBtnClick}>
                     <span>
 
                     </span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={menuIsOpen} onClick={() =>{setmenuIsOpen(false)}}>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <ListItem key={index}>
