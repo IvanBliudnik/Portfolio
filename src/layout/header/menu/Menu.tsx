@@ -2,51 +2,29 @@ import React from 'react';
 import styled from "styled-components";
 import {Theme} from "../../../styles/Theme";
 
-
-// передаём Props в сокращённом виде в Menu
-// type MenuPropsType = {
-//     menuItems: Array<string>
-// } //описание 13 строки
-
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const Menu:React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
-        <StyleHeaderMenu>
-            <ul>
-                {props.menuItems.map((item, index) => {
-                    return <ListItem key={index}>
-                        <Link href="">
-                            {item}
-                            <Mask>
+        <ul>
+            {props.menuItems.map((item, index) => {
+                return <ListItem key={index}>
+                    <Link href="">
+                        {item}
+                        <Mask>
                                 <span>
                                 {item}
                             </span>
-                            </Mask>
-                            <Mask>
+                        </Mask>
+                        <Mask>
                                 <span>
                                 {item}
                             </span>
-                            </Mask>
-                        </Link>
-                    </ListItem>
-                })}
-            </ul>
-        </StyleHeaderMenu>
+                        </Mask>
+                    </Link>
+                </ListItem>
+            })}
+        </ul>
     );
 };
-
-const StyleHeaderMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-    }
-
-    @media ${Theme.media.tablet} {
-        display: none;
-    }
-
-`
-
 
 const Link = styled.a`
     font-family: "Josefin Sans", sans-serif;
@@ -75,6 +53,7 @@ const Mask = styled.span`
         }
     }
 `
+
 const ListItem = styled.li`
     position: relative;
 
