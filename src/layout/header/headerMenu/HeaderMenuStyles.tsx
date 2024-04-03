@@ -1,41 +1,70 @@
-import React, {useState} from 'react';
-import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme";
-import {Menu} from "../menu/Menu";
+import styled, {css} from "styled-components";
 
+// Menu
+const Link = styled.a`
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: transparent;
+    text-align: center;
+`
+const Mask = styled.span`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 50%;
+    overflow: hidden;
+    //outline: 1px  solid  rebeccapurple;
+    color: ${Theme.colors.accent};
 
-// передаём Props в сокращённом виде в Menu
-// type MenuPropsType = {
-//     menuItems: Array<string>
-// } //описание 13 строки
+    & + & {
+        top: 50%;
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-    const [menuIsOpen, setmenuIsOpen] = useState(false)
-    const onBurgerBtnClick = () => {
-        setmenuIsOpen(!menuIsOpen)
+        span {
+            transform: translateY(-50%);
+            display: inline-block;
+        }
     }
-    return (
-        <StyleMobileMenu>
-            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={menuIsOpen} onClick={() => {
-                setmenuIsOpen(false)
-            }}>
-                <Menu menuItems={props.menuItems}/>
-            </MobileMenuPopup>
+`
+const MenuItem = styled.li`
+    position: relative;
 
-        </StyleMobileMenu>
-    );
-};
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        background-color: ${Theme.colors.font};
 
-const StyleMobileMenu = styled.nav`
-    display: none;
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
 
-    @media ${Theme.media.tablet} {
-        display: block;
+        transform: scale(0);
     }
 
+    &:hover {
+        &::before {
+            transform: scale(0.75);
+        }
+
+        ${Mask} {
+            transform: skewX(12deg) translateX(5px);
+            color: ${Theme.colors.font};
+
+            ${Mask} + ${Mask} {
+                transform: skewX(12deg) translateX(-5px);
+            }
+        }
+
+    }
+`
+
+// MobileMenu
+const MobileMenu = styled.nav`
 `
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
@@ -114,6 +143,23 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             `}
         }
     }
-
 `
 
+// DesktopMenu
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+`
+
+export const S = {
+    Link,
+    Mask,
+    MenuItem,
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+    DesktopMenu,
+}
