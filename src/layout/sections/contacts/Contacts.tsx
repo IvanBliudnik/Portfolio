@@ -1,65 +1,23 @@
 import React from 'react';
-import styled from "styled-components";
 import {StyleButton} from "../../../components/Button";
 import {Container} from "../../../components/Container";
-import {Theme} from "../../../styles/Theme";
 import {SectionTitle} from "../../../components/SectionTitle";
+import {SC} from "./StyleContacts"
 
-export const Contact = () => {
+export const Contact:React.FC = () => {
     return (
-        <StyledContacts>
+        <SC.Contacts>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
-                <StyledForm>
-                    <Field placeholder={"Name"}/>
-                    <Field placeholder={"Surname"}/>
-                    <Field as={"textarea"} placeholder={"Message"}/>
+                <SC.Form>
+                    <SC.Field placeholder={"Name"}/>
+                    <SC.Field placeholder={"Surname"}/>
+                    <SC.Field as={"textarea"} placeholder={"Message"}/>
                     <StyleButton type={"submit"}>Send message</StyleButton>
-                </StyledForm>
+                </SC.Form>
             </Container>
-        </StyledContacts>
+        </SC.Contacts>
     );
 };
 
-const StyledContacts = styled.section`
 
-`
-
-const StyledForm = styled.form`
-    max-width: 540px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin: 0 auto;
-    
-    textarea {
-        resize: none; // запрет изменения поля текстареа в Styled form 
-        height: 155px;
-    }
-`
-
-const Field = styled.input`
-    width: 100%;
-    background-color: ${Theme.colors.secondaryBg};
-    border: 1px solid ${Theme.colors.borderColor};
-    padding: 7px 15px;
-    
-    font-family: Poppins,sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    
-    color: ${Theme.colors.font};
-    
-    &::placeholder {
-        color: ${Theme.colors.placeholder};
-        text-transform: capitalize;
-    }
-    
-    &:focus-visible {
-        outline: 1px solid ${Theme.colors.borderColor};
-    }
-    
-`

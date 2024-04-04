@@ -6,7 +6,7 @@ import {Theme} from "../../../styles/Theme";
 import {FlexContainer} from "../../../components/FlexContainer";
 import {Container} from "../../../components/Container";
 
-export const Slogan = () => {
+export const Slogan:React.FC = () => {
     return (
         <StyledSlogan>
             <Container>
