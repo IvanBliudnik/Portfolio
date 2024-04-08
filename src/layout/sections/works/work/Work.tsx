@@ -20,8 +20,8 @@ export const Work:React.FC<WorkPropsType> = (props: WorkPropsType) => {
             <SW.Description>
                 <SW.Title>{props.title}</SW.Title>
                 <SW.Text>{props.text}</SW.Text>
-                <Link href={"Всякие фразочки"}>demo</Link>
-                <Link href={"Всякие фразочки"}>code</Link>
+                <Link active href={"Всякие фразочки"}>demo</Link>
+                <Link active href={"Всякие фразочки"}>code</Link>
             </SW.Description>
         </SW.Work>
     );

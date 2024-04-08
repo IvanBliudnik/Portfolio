@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 
 const Slider = styled.div`
+    width: 100%;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid red;
 `
 const Slide = styled.div`
     text-align: center;

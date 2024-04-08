@@ -1,22 +1,40 @@
 // @ts-ignore
 import React from 'react';
-import {FlexContainer} from "../FlexContainer";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import {S} from "./SliderStyles"
-export const Slider:React.FC = () => {
-    return (
-        <S.Slider>
-            <FlexContainer>
-                <S.Slide>
-                    <S.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</S.Text>
-                    <S.Name>@Ivan Ivanov</S.Name>
-                </S.Slide>
-            </FlexContainer>
-            <S.Pagination>
-                <span></span>
-                <span className={"active"}></span>
-                <span></span>
-            </S.Pagination>
-        </S.Slider>
-    );
-};
+import "./../../styles/slider.css"
 
+type SLidePropsType = {
+    text: string,
+    userName: string,
+}
+
+const Slide = (props:SLidePropsType) => {
+    return (<S.Slide>
+            <S.Text>{props.text}</S.Text>
+            <S.Name>@{props.userName}</S.Name>
+        </S.Slide>
+    )
+}
+
+const items = [
+    <Slide userName = {"Ivan Ivanov"}
+           text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore" +
+        "                et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."} />,
+    <Slide userName = {"Ivan Petrov"}
+           text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore" +
+        "                et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."} />,
+    <Slide userName = {"Ivan Sidorov"}
+           text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore" +
+        "                et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."} />,
+];
+
+export const Slider:React.FC = () => (
+    <S.Slider>
+        <AliceCarousel
+            mouseTracking
+            items={items}
+        />
+    </S.Slider>
+);
