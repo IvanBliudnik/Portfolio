@@ -20,7 +20,6 @@ const Work = styled.div`
     }
     
     @media ${Theme.media.desktop} {
-        max-width: 100%;
     }
 `
 
@@ -28,6 +27,7 @@ const Works = styled.section`
     ${FlexContainer} {
         gap: 30px;
     }
+  position: relative;
 `
 
 const Image = styled.img`

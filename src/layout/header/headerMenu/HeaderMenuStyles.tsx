@@ -139,7 +139,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);
-                width: 45px;
+                width: 36px;
             `}
         }
     }

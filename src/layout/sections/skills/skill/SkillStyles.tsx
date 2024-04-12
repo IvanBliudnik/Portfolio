@@ -19,6 +19,7 @@ const SkillText = styled.p`
     text-align: center;
 `
 const SkillsSection = styled.section`
+    position: relative;
 `
 const IconWrapper = styled.div`
     position: relative;

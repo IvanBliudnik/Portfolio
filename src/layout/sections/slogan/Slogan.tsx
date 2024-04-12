@@ -12,7 +12,7 @@ export const Slogan:React.FC = () => {
             <Container>
                 <FlexContainer direction={"column"} align={"center"}>
                     <SectionTitle>Hi, Jack</SectionTitle>
-                    <StyleButton>Please contact me</StyleButton>
+                    <StyleButton>Write me</StyleButton>
                 </FlexContainer>
             </Container>
         </StyledSlogan>
