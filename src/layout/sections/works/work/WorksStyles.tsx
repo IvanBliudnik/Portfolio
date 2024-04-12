@@ -20,7 +20,7 @@ const Work = styled.div`
     }
     
     @media ${Theme.media.desktop} {
-        max-width: 540px;
+        max-width: 100%;
     }
 `
 
