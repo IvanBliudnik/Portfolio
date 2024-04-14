@@ -9,13 +9,12 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main:React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id = "home">
             <Container>
                 <FlexContainer align={"center"} justify={"space-around"} wrap={"wrap"}>
                     <div>
                         <S.SmallText>Hi There</S.SmallText>
                         <S.NameTitle><span>I am Ivan Bliudnik</span></S.NameTitle>
-
                         <S.MainTitle>
                             {/*для CEO продвижения скрин ридера нужно сделать так*/}
                             <p>'I am student of it-incubator', "Learning HTML, CSS"</p>

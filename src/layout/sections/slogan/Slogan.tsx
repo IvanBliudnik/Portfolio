@@ -8,7 +8,7 @@ import {Container} from "../../../components/Container";
 
 export const Slogan:React.FC = () => {
     return (
-        <StyledSlogan>
+        <StyledSlogan >
             <Container>
                 <FlexContainer direction={"column"} align={"center"}>
                     <SectionTitle>Hi, Jack</SectionTitle>

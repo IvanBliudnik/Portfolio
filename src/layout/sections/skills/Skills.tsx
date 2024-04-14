@@ -39,7 +39,7 @@ const skillData = [
 ]
 export const Skills = () => {
     return (
-        <S.SkillsSection>
+        <S.SkillsSection id={"skills"}>
             <Container>
                 <SectionTitle>My skills</SectionTitle>
                 <FlexContainer wrap={"wrap"} justify={"space-between"}>
