@@ -3,7 +3,7 @@ import {Theme} from "../styles/Theme";
 
 
 export const StyleButton = styled.button`
-    width: 25%;
+    width: 30%;
     height: 32px;
     font-size: 14px;
     font-weight: 400;
@@ -28,7 +28,7 @@ export const StyleButton = styled.button`
         content: "";
         display: inline-block;
         height: 10px;
-        width: 50%;
+        width: 25%;
         background-color: ${Theme.colors.accent};
         
         position: absolute;
