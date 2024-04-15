@@ -100,4 +100,21 @@
                   fill="#7572D5"/>
         </svg>
     </g>
+    <g id="arrowUp">
+        <svg width="16.000000" height="15.000000" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                Created with Pixso.
+            </desc>
+            <defs>
+                <clipPath id="clip20_2005">
+                    <rect id="btn-go-top" width="30.000000" height="30.000000" fill="white" fill-opacity="0"/>
+                </clipPath>
+            </defs>
+            <rect id="btn-go-top" width="30.000000" height="30.000000" fill="#FFFFFF" fill-opacity="0"/>
+            <g clip-path="url(#clip20_2005)">
+                <rect id="Rectangle 17" width="30.000000" height="30.000000" fill="#000000" fill-opacity="0.300000"/>
+                <path id="Vector" d="M13.8 11.28L13.8 22L16.19 22L16.19 11.28L21.31 16.08L23 14.5L15 7L7 14.5L8.68 16.08L13.8 11.28Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+            </g>
+        </svg>
+    </g>
 </svg>
