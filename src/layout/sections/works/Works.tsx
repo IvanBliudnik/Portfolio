@@ -8,9 +8,10 @@ import timerImg from "../../../assets/images/proj2_1.webp"
 import {Container} from "../../../components/Container";
 import {SW} from "./work/WorksStyles"
 import {TabsStatusType} from "./tabMenu/TabMenu";
+import {AnimatePresence, motion} from "framer-motion"
 
 
-const tabsItems: Array<{ title: string, status: TabsStatusType}> = [
+const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
     {
         title: "All",
         status: "all"
@@ -34,13 +35,43 @@ const worksData = [
         title: "Social Network",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
         src: socialImg,
-        type: "spa"
+        type: "spa",
+        id: 1,
     },
     {
         title: "Timer",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
         src: timerImg,
-        type: "react"
+        type: "react",
+        id: 2,
+    },
+    {
+        title: "Social Network",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+        src: socialImg,
+        type: "spa",
+        id: 3,
+    },
+    {
+        title: "Timer",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+        src: timerImg,
+        type: "react",
+        id: 4,
+    },
+    {
+        title: "Social Network",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+        src: socialImg,
+        type: "spa",
+        id: 5,
+    },
+    {
+        title: "Timer",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+        src: timerImg,
+        type: "react",
+        id: 6,
     },
 ]
 
@@ -59,7 +90,7 @@ export const Works = () => {
     }
 
     function changeFilterStatus(value: TabsStatusType) {
-    setCurrentFilterStatus(value)
+        setCurrentFilterStatus(value)
     }
 
     return (
@@ -67,12 +98,29 @@ export const Works = () => {
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu tabsItems={tabsItems}
-                         changeFilterStatus = {changeFilterStatus}
-                         currentFilterStatus = {currentFilterStatus}/>
+                         changeFilterStatus={changeFilterStatus}
+                         currentFilterStatus={currentFilterStatus}/>
                 <FlexContainer justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-                    {filteredWorks.map((w, index) => {
-                        return <Work title={w.title} text={w.text} src={w.src} key={index}/>
-                    })}
+
+                    <AnimatePresence>
+                        {filteredWorks.map((w, index) => {
+                            return (
+                                <motion.div style={{width: "400px", flexGrow:1, maxWidth:"540px"}}
+                                    layout
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    key={w.id}
+                                >
+                                    <Work title={w.title}
+                                          text={w.text}
+                                          src={w.src}
+                                          key={w.id}/>
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
+
                 </FlexContainer>
             </Container>
         </SW.Works>

@@ -5,6 +5,7 @@
     display: inline-block;
     width: 7px;
     height: 7px;
+    transition: .2s ease-in-out;
     background-color: rgb(255, 255, 255, 0.5);
     border-radius: 20px;
 }
@@ -16,8 +17,8 @@
 }
 .alice-carousel__dots-item:not(.__custom).__active {
     background-color: #7572D5;
-    width: 30px;
+    width: 20px;
 }
 .alice-carousel__prev-btn, .alice-carousel__next-btn {
-    /*display: none;*/
+    display: none;
 }

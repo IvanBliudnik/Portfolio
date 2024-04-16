@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import {FlexContainer} from "../../../../components/FlexContainer";
 import {S} from "./SkillStyles"
+import { Fade } from "react-awesome-reveal";
 
 
 type SkillPropsType = {

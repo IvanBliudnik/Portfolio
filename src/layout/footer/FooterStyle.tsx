@@ -18,7 +18,7 @@ const SocialList = styled.ul`
     margin: 30px 0;
 `
 const SocialItem = styled.li`
-
+    
 `
 const SocialIconLink = styled.a`
     border-radius: 50%;
@@ -30,10 +30,8 @@ const SocialIconLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    color: ${
-    Theme.colors.accent
-};
+    transition: ${Theme.animation.transition};
+    color: ${Theme.colors.accent};
     
     &:hover {
         color: ${Theme.colors.primaryBg};
