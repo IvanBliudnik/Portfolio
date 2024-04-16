@@ -100,7 +100,7 @@ export const Works = () => {
                 <TabMenu tabsItems={tabsItems}
                          changeFilterStatus={changeFilterStatus}
                          currentFilterStatus={currentFilterStatus}/>
-                <FlexContainer justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
+                <FlexContainer justify={"center"} align={"flex-start"} wrap={"wrap"}>
 
                     <AnimatePresence>
                         {filteredWorks.map((w, index) => {
