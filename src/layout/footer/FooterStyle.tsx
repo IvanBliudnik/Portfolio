@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Footer = styled.footer`
     background-color: ${Theme.colors.primaryBg};
     padding: 40px 0; // отступы всего Footer
+    position: relative;
 `
 const Name = styled.span`
     font-family: Josefin Sans, sans-serif;

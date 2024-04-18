@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import {Theme} from "../../../../styles/Theme";
 
-
+const SkillsSection = styled.section`
+    position: relative;
+`
 const Skill = styled.div`
     width: 330px;
     flex-grow: 1; //каждый элемент skill будет занимать всё свободное место на странице
@@ -18,9 +20,7 @@ const SkillTitle = styled.h3`
 const SkillText = styled.p`
     text-align: center;
 `
-const SkillsSection = styled.section`
-    position: relative;
-`
+
 const IconWrapper = styled.div`
     position: relative;
 
