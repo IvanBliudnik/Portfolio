@@ -1,9 +1,6 @@
 import {Theme} from "../../../styles/Theme";
 import styled, {css} from "styled-components";
 import {Link} from "react-scroll";
-
-
-
 // Menu
 const MenuItem = styled.li`
     position: relative;

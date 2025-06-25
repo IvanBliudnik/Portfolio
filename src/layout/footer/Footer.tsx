@@ -6,12 +6,14 @@ import {SF} from "./FooterStyle"
 
 const socialItemsData = [
     {
-        iconId:"inst",
+        iconId: "inst",
+        link: "https://www.instagram.com/vaniabliudnik/", // Ссылка на Instagram
     },
     {
-        iconId:"tg",
+        iconId: "tg",
+        link: "https://t.me/@Johny_47", // Ссылка на Telegram
     },
-]
+];
 
 export const Footer:React.FC = () => {
     return (
@@ -23,12 +25,12 @@ export const Footer:React.FC = () => {
                         return <SF.SocialItem>
                             <SF.SocialIconLink key={index}>
                                 <Icon height={"20"}
-                                      width={"20"} viewBox={"0 0 20 20"} iconId={s.iconId}/>
+                                      width={"20"} viewBox={"0 0 20 20"} iconId={s.iconId} link={s.link}/>
                             </SF.SocialIconLink>
                         </SF.SocialItem>
                     })}
                 </SF.SocialList>
-                <SF.Copyright>@ 2024.03.07 Ivan Bliudnik</SF.Copyright>
+                <SF.Copyright>@ 2025.06.25 Ivan Bliudnik</SF.Copyright>
             </FlexContainer>
         </SF.Footer>
     );

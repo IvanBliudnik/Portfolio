@@ -1,42 +1,28 @@
 // @ts-ignore
 import React from 'react';
 // @ts-ignore
-import IconsSprite from '../../assets/images/icons-sprite.svg'
+import IconsSprite from '../../assets/images/icons-sprite.svg';
 
 type IconPropsType = {
-    iconId: string
-    width?: string
-    height?: string
-    viewBox?: string
-}
+    iconId: string;
+    width?: string;
+    height?: string;
+    viewBox?: string;
+    link?: string; // Add an optional link prop
+};
 
 export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
     return (
-        <div>
-            <a href="https://www.instagram.com/vaniabliudnik/" target="_blank" rel="noopener noreferrer">
-                <svg
-                    width={props.width || "50px"}
-                    height={props.height || "50px"}
-                    viewBox={props.viewBox || "0 0 50 50"}
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <use xlinkHref={`${IconsSprite}#${props.iconId}`}/>
-                </svg>
-            </a>
-
-            <a href="https://t.me/@Johny_47" target="_blank" rel="noopener noreferrer">
-                <svg
-                    width={props.width || "50px"}
-                    height={props.height || "50px"}
-                    viewBox={props.viewBox || "0 0 50 50"}
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <use xlinkHref={`${IconsSprite}#${props.iconId}`}/>
-                </svg>
-            </a>
-        </div>
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
+            <svg
+                width={props.width || "50px"}
+                height={props.height || "50px"}
+                viewBox={props.viewBox || "0 0 50 50"}
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <use xlinkHref={`${IconsSprite}#${props.iconId}`} />
+            </svg>
+        </a>
     );
 };
-
