@@ -11,9 +11,6 @@ const socialItemsData = [
     {
         iconId:"tg",
     },
-    {
-        iconId:"vk",
-    },
 ]
 
 export const Footer:React.FC = () => {
