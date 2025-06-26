@@ -94,7 +94,7 @@ export const Works = () => {
     }
 
     return (
-        <SW.Works id={"works"}>
+        <SW.Works id={"Мои работы"}>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu tabsItems={tabsItems}

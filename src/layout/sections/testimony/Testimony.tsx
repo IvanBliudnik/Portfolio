@@ -8,7 +8,7 @@ import {S} from "../skills/skill/SkillStyles"
 
 export const Testimony:React.FC = () => {
     return (
-        <StyleTestimony id={"testimony"}>
+        <StyleTestimony id={"Отзывы"}>
             <SectionTitle>Testimony</SectionTitle>
             <FlexContainer direction={"column"} align={"center"}>
                 <S.IconWrapper>

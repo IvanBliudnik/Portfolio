@@ -22,7 +22,7 @@ function App() {
             <Works/>
             <Testimony/>
             <Contact/>
-            <Slogan/>
+            {/*<Slogan/>*/}
             <Footer/>
             <GoTopBtn/>
         </div>

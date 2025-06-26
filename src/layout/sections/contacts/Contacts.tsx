@@ -29,7 +29,7 @@ export const Contact:React.FC = () => {
         e.target.reset()
     };
     return (
-        <SC.Contacts id={"contact"}>
+        <SC.Contacts id={"Контакты"}>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <FlexContainer>

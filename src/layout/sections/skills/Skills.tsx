@@ -40,7 +40,7 @@ const skillData = [
 ]
 export const Skills = () => {
     return (
-        <S.SkillsSection id={"skills"}>
+        <S.SkillsSection id={"Навыки"}>
             <Container>
                 <SectionTitle>My skills</SectionTitle>
                 <FlexContainer wrap={"wrap"} justify={"center"}>

@@ -2,24 +2,24 @@ import React from 'react';
 import {S} from "../HeaderMenuStyles"
 
 const items = [{
-    title: "Home",
-    href: "home",
+    title: "Главная",
+    href: "Главная",
 },
     {
-        title: "Skills",
-        href: "skills",
+        title: "Навыки",
+        href: "Навыки",
     },
     {
-        title: "Works",
-        href: "works",
+        title: "Мои работы",
+        href: "Мои работы",
     },
     {
-        title: "Testimony",
-        href: "testimony",
+        title: "Отзывы",
+        href: "Отзывы",
     },
     {
-        title: "Contact",
-        href: "contact",
+        title: "Контакты",
+        href: "Контакты",
     }]
 
 export const Menu: React.FC = () => {
