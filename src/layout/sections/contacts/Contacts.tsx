@@ -31,14 +31,14 @@ export const Contact:React.FC = () => {
     return (
         <SC.Contacts id={"Контакты"}>
             <Container>
-                <SectionTitle>Contact</SectionTitle>
+                <SectionTitle>Написать</SectionTitle>
                 <FlexContainer>
                 <SC.Form ref={form} onSubmit={sendEmail}>
                     <SC.Field required placeholder={"Name"} name = {"user_name"}/>
                     <SC.Field required placeholder={"email"} name = {"email"}/>
                     <SC.Field required placeholder={"subject"} name = {"subject"}/>
                     <SC.Field required as={"textarea"} placeholder={"Message"} name = {"message"}/>
-                    <StyleButton type={"submit"}>Send message</StyleButton>
+                    <StyleButton type={"submit"}>Отправить</StyleButton>
                 </SC.Form>
                 </FlexContainer>
             </Container>

@@ -20,17 +20,18 @@ export const Footer:React.FC = () => {
         <SF.Footer>
             <FlexContainer direction={"column"} align={"center"}>
                 <SF.Footer>Bliudnik007@gmail.com</SF.Footer>
+                <SF.Footer>+375295807007</SF.Footer>
                 <SF.SocialList>
                     {socialItemsData.map((s,index)=>{
                         return <SF.SocialItem>
                             <SF.SocialIconLink key={index}>
-                                <Icon height={"20"}
-                                      width={"20"} viewBox={"0 0 20 20"} iconId={s.iconId} link={s.link}/>
+                                <Icon height={"25"}
+                                      width={"25"} viewBox={"0 -3 20 20"} iconId={s.iconId} link={s.link}/>
                             </SF.SocialIconLink>
                         </SF.SocialItem>
                     })}
                 </SF.SocialList>
-                <SF.Copyright>@ 2025.06.25 Ivan Bliudnik</SF.Copyright>
+                <SF.Copyright>@ 2025.08.08 Ivan Bliudnik</SF.Copyright>
             </FlexContainer>
         </SF.Footer>
     );
