@@ -2083,6 +2083,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"
   integrity sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==
 
+"@types/react-alice-carousel@^1.15.3":
+  version "1.15.3"
+  resolved "https://registry.yarnpkg.com/@types/react-alice-carousel/-/react-alice-carousel-1.15.3.tgz#e581096b3867c025bbe842e4f2af5b239dc6df62"
+  integrity sha512-3tv5HALFTjS7ixUbBzkvEn7aDqPMxoYZkcISbkV58utCUNwJDznhKC/b+qqZv4SXMdRHGT1uU0U476OduKXwwg==
+  dependencies:
+    react-alice-carousel "*"
+
 "@types/react-dom@*":
   version "18.0.11"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.11.tgz#321351c1459bc9ca3d216aefc8a167beec334e33"
@@ -7771,7 +7778,7 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-alice-carousel@^2.9.1:
+react-alice-carousel@*, react-alice-carousel@^2.9.1:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.9.1.tgz#670c6d2fae401b8e924eb512ee6358964675a19c"
   integrity sha512-/wQE4cqogKL/db+SoiiRmdj5j6C9I31pfzrmz8nuXmWmSl/UxxJz/O92W/ryxicTw1au+3mUW+drU3ZAhF3JPA==
