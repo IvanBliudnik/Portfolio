@@ -4,7 +4,7 @@ import {TabMenu} from "./tabMenu/TabMenu";
 import {FlexContainer} from "../../../components/FlexContainer";
 import {Work} from "./work/Work";
 import socialImg from "../../../assets/images/IMG_0969.webp"
-import timerImg from "../../../assets/images/IMG_0980.webp"
+import coffee from "../../../assets/images/IMG_0980.webp"
 import {Container} from "../../../components/Container";
 import {SW} from "./work/WorksStyles"
 import {TabsStatusType} from "./tabMenu/TabMenu";
@@ -40,8 +40,8 @@ const worksData = [
     },
     {
         title: "ShopMenu",
-        text: "Hello my start shop menu",
-        src: timerImg,
+        text: "coffeeshop menu",
+        src: coffee,
         type: "react",
         id: 2,
     },
@@ -55,23 +55,9 @@ const worksData = [
     {
         title: "Timer",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: timerImg,
+        src: coffee,
         type: "react",
         id: 4,
-    },
-    {
-        title: "Social Network",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: socialImg,
-        type: "spa",
-        id: 5,
-    },
-    {
-        title: "Timer",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: timerImg,
-        type: "react",
-        id: 6,
     },
 ]
 

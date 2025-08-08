@@ -21,7 +21,7 @@ export const Work:React.FC<WorkPropsType> = (props: WorkPropsType) => {
                 <SW.Title>{props.title}</SW.Title>
                 <SW.Text>{props.text}</SW.Text>
                 {/*<Link active href={"#"}>visit</Link>*/}
-                <Link href={"https://ivanbliudnik.github.io/coffeeShopMenu-FCC/"}>visit page</Link>
+                <Link href={"https://ivanbliudnik.github.io/coffeeShopMenu-FCC/"}>take a look</Link>
             </SW.Description>
         </SW.Work>
     );
