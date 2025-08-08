@@ -8,7 +8,7 @@ const Skill = styled.div`
     width: 330px;
     flex-grow: 1; //каждый элемент skill будет занимать всё свободное место на странице
     padding: 62px 20px 40px;
-    
+
     @media ${Theme.media.mobile} {
         padding: 62px 0 40px;
     }
@@ -27,11 +27,11 @@ const IconWrapper = styled.div`
     &::before {
         content: "";
         display: inline-block;
-        width: 80px;
-        height: 80px;
-        transform: rotate(45.00deg) translate(-50%, -50%);
-        background-color: #FFFFFF1A;
-
+        width: 180px;
+        height: 180px;
+        transform: translate(-50%, -50%);
+        background-color: rgba(168, 168, 168, 0.1);
+        border-radius: 25%;
         position: absolute;
         left: 50%;
         top: 50%;

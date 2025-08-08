@@ -12,10 +12,12 @@ const PhotoWrapper = styled.div`
     z-index: 0;
     margin-top: 65px;
 
+
     &::before {
         content: "";
         width: 360px;
         height: 470px;
+        border-radius: 5%;
         border: 4px solid ${Theme.colors.accent};
 
         position: absolute;
@@ -36,6 +38,7 @@ const Photo = styled.img`
     height: 420px;
     object-fit: cover;
     margin-right: 20px;
+    border-radius: 5%;
 
     @media ${Theme.media.mobile} {
         width: 310px;

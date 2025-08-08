@@ -13,10 +13,10 @@
     margin-right: 5px;
 }
 .alice-carousel__dots-item:not(.__custom):hover {
-    background-color: #7572D5;
+    background-color: #e16216;
 }
 .alice-carousel__dots-item:not(.__custom).__active {
-    background-color: #7572D5;
+    background-color: #e16216;
     width: 20px;
 }
 .alice-carousel__prev-btn, .alice-carousel__next-btn {

@@ -3,8 +3,9 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {TabMenu} from "./tabMenu/TabMenu";
 import {FlexContainer} from "../../../components/FlexContainer";
 import {Work} from "./work/Work";
-import socialImg from "../../../assets/images/IMG_0969.webp"
-import coffee from "../../../assets/images/IMG_0980.webp"
+import cgphoto from "../../../assets/images/44815.970.webp"
+import coffee from "../../../assets/images/napitki-iz-kofe-1-big.webp"
+import ggsizPhoto from "../../../assets/images/ggsizPhoto.webp"
 import {Container} from "../../../components/Container";
 import {SW} from "./work/WorksStyles"
 import {TabsStatusType} from "./tabMenu/TabMenu";
@@ -21,8 +22,8 @@ const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
         status: "landing"
     },
     {
-        title: "React",
-        status: "react"
+        title: "JS",
+        status: "JS"
     },
     {
         title: "SPA",
@@ -32,32 +33,28 @@ const tabsItems: Array<{ title: string, status: TabsStatusType }> = [
 
 const worksData = [
     {
-        title: "Social Network",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: socialImg,
-        type: "spa",
+        title: "CaveGame",
+        text: "FirstSimpleGame",
+        src: cgphoto,
+        type: "JS",
         id: 1,
+        link: {label: "Сыграть в CaveGame", url: "https://www.cavegame.com/"},
     },
     {
         title: "ShopMenu",
         text: "coffeeshop menu",
         src: coffee,
-        type: "react",
+        type: "landing",
         id: 2,
+        link: {label: "Посмотреть меню", url: "https://www.coffeeshop.com/"},
     },
     {
-        title: "Social Network",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: socialImg,
+        title: "MyWorkSite",
+        text: "My first work site made on Tilda",
+        src: ggsizPhoto,
         type: "spa",
         id: 3,
-    },
-    {
-        title: "Timer",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enimLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        src: coffee,
-        type: "react",
-        id: 4,
+        link: {label: "Посетить мой сайт", url: "https://gsiztest.tilda.ws/"},
     },
 ]
 
@@ -68,8 +65,8 @@ export const Works = () => {
     if (currentFilterStatus === "landing") {
         filteredWorks = worksData.filter(work => work.type === "landing")
     }
-    if (currentFilterStatus === "react") {
-        filteredWorks = worksData.filter(work => work.type === "react")
+    if (currentFilterStatus === "JS") {
+        filteredWorks = worksData.filter(work => work.type === "JS")
     }
     if (currentFilterStatus === "spa") {
         filteredWorks = worksData.filter(work => work.type === "spa")
@@ -91,17 +88,18 @@ export const Works = () => {
                     <AnimatePresence>
                         {filteredWorks.map((w, index) => {
                             return (
-                                <motion.div style={{width: "400px", flexGrow:1, maxWidth:"540px"}}
-                                    layout
-                                    initial={{opacity: 0}}
-                                    animate={{opacity: 1}}
-                                    exit={{opacity: 0}}
-                                    key={w.id}
+                                <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "540px"}}
+                                            layout
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            exit={{opacity: 0}}
+                                            key={w.id}
                                 >
                                     <Work title={w.title}
                                           text={w.text}
                                           src={w.src}
-                                          key={w.id}/>
+                                          key={w.id}
+                                          link={w.link}/>
                                 </motion.div>
                             )
                         })}

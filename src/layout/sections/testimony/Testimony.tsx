@@ -9,10 +9,10 @@ import {S} from "../skills/skill/SkillStyles"
 export const Testimony:React.FC = () => {
     return (
         <StyleTestimony id={"Отзывы"}>
-            <SectionTitle>Testimony</SectionTitle>
+            <SectionTitle>Отзывы</SectionTitle>
             <FlexContainer direction={"column"} align={"center"}>
                 <S.IconWrapper>
-                    <Icon iconId={"quote"}/>
+                    <Icon iconId={"#"}/>
                 </S.IconWrapper>
                 <Slider/>
             </FlexContainer>

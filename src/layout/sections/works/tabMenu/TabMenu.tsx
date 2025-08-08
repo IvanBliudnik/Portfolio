@@ -8,7 +8,7 @@ import {Link} from "../../../../components/Link";
 //     menuItems: Array<string>
 // } //описание 13 строки
 
-export type TabsStatusType = "all" | "landing" | "react" | "spa"
+export type TabsStatusType = "all" | "landing" | "JS" | "spa"
 
 type TabMenuPropsType = {
     tabsItems: Array<{ title: string, status: TabsStatusType}>,

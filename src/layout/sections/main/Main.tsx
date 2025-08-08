@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from "./../../../assets/images/photo.webp"
+import Photo from "../../../assets/images/IMG_5300.webp"
 import {FlexContainer} from "../../../components/FlexContainer";
 import {Container} from "../../../components/Container";
 import {S} from "./MainStyles"
@@ -12,15 +12,15 @@ export const Main:React.FC = () => {
             <Container>
                 <FlexContainer align={"center"} justify={"space-around"} wrap={"wrap"}>
                     <div>
-                        <S.SmallText>Hi There</S.SmallText>
-                        <S.NameTitle><span>I am Ivan Bliudnik</span></S.NameTitle>
+                        <S.SmallText>Привет</S.SmallText>
+                        <S.NameTitle><span>Я Иван Блюдник</span></S.NameTitle>
 
                         <S.MainTitle>
                             {/*для CEO продвижения скрин ридера нужно сделать так*/}
-                            <p>'I am student of it-incubator', "Learning HTML, CSS"</p>
+                            <p>"Обучаюсь на курсах FrontEnd разработки"</p>
                             <Typewriter
                                 options={{
-                                    strings: ['I am student of it-incubator', "Learning HTML, CSS"],
+                                    strings: ["Обучаюсь на курсах FrontEnd разработки"],
                                     autoStart: true,
                                     loop: true,
                                     delay: 50, //скорость печати текста
@@ -30,7 +30,7 @@ export const Main:React.FC = () => {
                     </div>
                     <Tilt>
                         <S.PhotoWrapper>
-                            <S.Photo src={photo} alt=""/>
+                            <S.Photo src={Photo} alt="моё фото"/>
                         </S.PhotoWrapper>
                     </Tilt>
                 </FlexContainer>
