@@ -8,7 +8,7 @@ type IconPropsType = {
     width?: string;
     height?: string;
     viewBox?: string;
-    link?: string; // Add an optional link prop
+    link?: string;
 };
 
 export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {

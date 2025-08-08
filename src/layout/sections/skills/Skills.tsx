@@ -8,7 +8,7 @@ import {Fade} from "react-awesome-reveal";
 
 const skillData = [
     {
-        iconId: "codeSvg",
+        iconId: "html",
         title: "HTML",
         description: "Умения работать в верстке HTML"
     },
@@ -23,32 +23,32 @@ const skillData = [
         description: "Базовые знания React"
     },
     {
-        iconId: "TS",
+        iconId: "ts",
         title: "TS",
         description: "Базовые знания TS"
     },
     {
-        iconId: "JS",
+        iconId: "js",
         title: "JS",
         description: "Базовые знания JS"
     },
     {
-        iconId: "Tilda",
+        iconId: "tilda",
         title: "Tilda",
         description: "Умение работать в Tilda"
     },
     {
-        iconId: "Pixso",
+        iconId: "pixso",
         title: "Pixso",
         description: "Знания озов работы с Pixso"
     },
     {
-        iconId: "SysAdmin",
+        iconId: "sysadmin",
         title: "SysAdmin",
         description: "Администрирование серверов и ПО"
     },
     {
-        iconId: "PLC",
+        iconId: "plc",
         title: "PLC",
         description: "Опыт работы с промышленными программируемыми контроллерами"
     },
