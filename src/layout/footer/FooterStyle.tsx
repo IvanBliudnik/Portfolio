@@ -32,7 +32,7 @@ const SocialIconLink = styled.a`
     justify-content: center;
     align-items: center;
     transition: ${Theme.animation.transition};
-    // color: ${Theme.colors.accent};
+     color: ${Theme.colors.accent};
     
     &:hover {
         color: ${Theme.colors.primaryBg};

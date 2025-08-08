@@ -10,32 +10,47 @@ const skillData = [
     {
         iconId: "codeSvg",
         title: "HTML",
-        description: "Супер разметка HTML"
+        description: "Умения работать в верстке HTML"
     },
     {
         iconId: "css",
         title: "CSS",
-        description: "Супер разметка HTML"
+        description: "Средний уровень знаний CSS"
     },
     {
         iconId: "react",
         title: "React",
-        description: "Супер разметка HTML"
+        description: "Базовые знания React"
     },
     {
         iconId: "TS",
         title: "TS",
-        description: "Супер разметка HTML"
+        description: "Базовые знания TS"
     },
     {
-        iconId: "figma",
-        title: "Figma",
-        description: "Супер разметка HTML"
+        iconId: "JS",
+        title: "JS",
+        description: "Базовые знания JS"
     },
     {
-        iconId: "styledcomponents",
-        title: "Styled Components",
-        description: "Очень сложная штуковина"
+        iconId: "Tilda",
+        title: "Tilda",
+        description: "Умение работать в Tilda"
+    },
+    {
+        iconId: "Pixso",
+        title: "Pixso",
+        description: "Знания озов работы с Pixso"
+    },
+    {
+        iconId: "SysAdmin",
+        title: "SysAdmin",
+        description: "Администрирование серверов и ПО"
+    },
+    {
+        iconId: "PLC",
+        title: "PLC",
+        description: "Опыт работы с промышленными программируемыми контроллерами"
     },
 ]
 export const Skills = () => {
